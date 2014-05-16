@@ -217,6 +217,7 @@ var singlePageNav = function (spec) {
             var target = e.target || e.srcElement;
             var dataHref = utils.getDataHref(target);
             if (dataHref) {
+                e.stopPropagation();
                 e.preventDefault();
                 // Display the next view
                 followLink(dataHref);

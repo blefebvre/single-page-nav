@@ -67,9 +67,13 @@
             </div>
         </div>
 
+        <script src="fastclick.js"></script>
         <script src="../single-page-nav.js"></script>
         <script>
-            (function() {
+            window.addEventListener('load', function() {
+                // Initialize fastclick
+                FastClick.attach(document.body);
+
                 // Initialize single page navigation
                 var contentDiv = document.getElementById("content");
                 var backButton = document.getElementById("back-button");
@@ -79,7 +83,7 @@
                         backElement:     backButton
                     }
                 );
-            })();
+            }, false);
         </script>
     </body>
 </html>
